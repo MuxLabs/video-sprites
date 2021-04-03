@@ -1,0 +1,23 @@
+.SpritePlayer {
+  position: relative;
+}
+
+.SpritePlayer video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.SpritePlayer canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.SpritePlayer media-control-bar {
+  z-index: 2;
+}

@@ -1,0 +1,13 @@
+.FeedButton {
+  background-color: #f9f9f9;
+  color: #292929;
+  border: 1px solid #ccc;
+  padding: 0.5em 0.8em;
+  cursor: pointer;
+}
+
+.active,
+.active:focus {
+  border-color: #fb2491;
+  outline: none;
+}
