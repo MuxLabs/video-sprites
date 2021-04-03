@@ -121,6 +121,7 @@ export default function SpritePlayer(props) {
           ref={videoRef}
           height={height}
           width={width}
+          playsInline
         >
           <track
             label="thumbnails"
