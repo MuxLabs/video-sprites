@@ -13,13 +13,11 @@ export default function SpritePlayer(props) {
   const src = `https://stream.mux.com/${props.playbackId}.m3u8`;
   const storyboardSrc = `https://image.mux.com/${props.playbackId}/storyboard.vtt`;
 
-  const feedCoordinates = () => {
-    const video = videoRef.current;
-
+  const feedCoordinates = (video, feed) => {
     const width = video.videoWidth;
     const height = video.videoHeight;
 
-    switch (feedRef.current) {
+    switch (feed) {
       case 0:
         return [0, 0, width / 2, height / 2];
       case 1:
@@ -47,7 +45,7 @@ export default function SpritePlayer(props) {
       return;
     }
 
-    const [sX, sY, sWidth, sHeight] = feedCoordinates();
+    const [sX, sY, sWidth, sHeight] = feedCoordinates(video, feedRef.current);
 
     context.drawImage(
       video,
